@@ -1,0 +1,27 @@
+.arc-parent
+{
+    display: inline-block;
+}
+
+.arc-loader
+{
+    border: 5px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    min-width: 3em;
+    min-height: 3em;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    padding: 0.5em;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    margin: auto;
+}
+
+@keyframes spin
+{
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
