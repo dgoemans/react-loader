@@ -12,8 +12,16 @@ class Loader extends React.Component
     {
         super(props);
 
+        this.config = props.config || {
+            colors: [
+                "#F25F5C",
+                "#FFE066",
+                "#247BA0",
+                "#70C1B3"
+            ],
+        }
+
         // TODOS:
-        // - Programmatically set the color scheme (CSS or JS?)
         // - Change the size?
 
         this.loader = new SimpleBarLoader();
@@ -21,7 +29,7 @@ class Loader extends React.Component
 
     render()
     {
-        return this.loader.render(this.props.percent);
+        return this.loader.render(this.props.percent, this.config);
     }
 }
 

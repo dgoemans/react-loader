@@ -3,7 +3,7 @@ import styles from "./CircularLoader.css";
 
 class CircularLoader
 {
-    render(percent)
+    render(percent, config)
     {
         return (<div className="arc-parent"><div className="arc-loader"></div></div>);
     }

@@ -1,21 +1,18 @@
 import React from 'react';
 import styles from "./SimpleBarLoader.css";
+import ColorHelper from '../../helpers/ColorHelper';
 
 class SimpleBarLoader
 {
-    render(percent)
+    render(percent, config)
     {
-        let colors = [
-            "#F25F5C"
-            // "#F25F5C",
-            // "#FFE066",
-            // "#247BA0",
-            // "#70C1B3"
-        ];
+        let colors = config.colors;
 
-        let currentColor = colors[Math.floor(percent/100*colors.length)]; 
+        colors.push(config.colors[0]);
 
-        return (<div className="bar-parent"><div className="bar-loader" style={{width: percent + '%', backgroundColor: currentColor}}></div></div>);
+        let calculatedColor = ColorHelper.getLerpedColorAtProgress(percent, colors);
+
+        return (<div className="bar-parent"><div className="bar-loader" style={{width: percent + '%', backgroundColor: calculatedColor}}></div></div>);
     }
 }
 

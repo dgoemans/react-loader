@@ -10,6 +10,12 @@ class App extends React.Component {
         this.state = {
             percent: 0
         }
+
+        this.colors = [
+            "#333333",
+            "#999999",
+            "#dddddd"
+        ]
         
         setInterval(this.increasePercent.bind(this), 100);
     }
@@ -27,7 +33,7 @@ class App extends React.Component {
     }
     
     render () {
-    return (<div style={{margin: "auto", display: "inline-block"}}><Loader percent={this.state.percent} /></div>);
+    return (<div style={{margin: "auto", display: "inline-block"}}><Loader percent={this.state.percent} config={{ colors: this.colors }} /></div>);
     }
 }
 

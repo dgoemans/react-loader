@@ -3,13 +3,13 @@ import styles from "./BouncingBallLoader.css";
 
 class BouncingBallLoader
 {
-    render(percent)
+    render(percent, config)
     {
         let balls = [];
 
         for(var i=0; i<4; i++)
         {
-            let jsx = <div key={i} className={"ball-loader ball"+(i+1)  } style={{ animationDelay: i*0.1 + "s" }}></div>;
+            let jsx = <div key={i} className="ball-loader" style={{ animationDelay: i*0.1 + "s", backgroundColor: config.colors[i] }}></div>;
 
             balls.push(jsx)
         }
