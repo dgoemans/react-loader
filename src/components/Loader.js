@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import SimpleTextLoader from './views/SimpleTextLoader';
 import CircularLoader from './views/CircularLoader';
 import SimpleBarLoader from './views/SimpleBarLoader';
+import BouncingBallLoader from './views/BouncingBallLoader';
 
 
 class Loader extends React.Component
@@ -11,7 +12,7 @@ class Loader extends React.Component
     {
         super(props);
 
-        this.loader = new CircularLoader();
+        this.loader = new BouncingBallLoader();
     }
 
     render()

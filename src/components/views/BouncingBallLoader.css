@@ -1,0 +1,46 @@
+.balls-parent
+{
+    display: inline-block;
+    height: 5em;
+}
+
+.ball-loader
+{
+    display: inline-block;
+    background-color: #000;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    animation-name: bounce;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    margin: 0.5em;
+}
+
+.ball1
+{
+    background-color: #F25F5C;
+}
+
+.ball2
+{
+    background-color: #FFE066;
+}
+
+.ball3
+{
+    background-color: #247BA0;
+}
+
+.ball4
+{
+    background-color: #70C1B3;
+}
+
+@keyframes bounce
+{
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(3em); }
+}
