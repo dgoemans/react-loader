@@ -1,10 +1,10 @@
 .bar-parent
 {
     display: inline-block;
-    border: 2px solid #000;
+    border: 2px solid #dddddd;
     min-width: 21em;
     height: 1em;
-    border-radius: 4px;
+    border-radius: 0px;
 }
 
 .bar-loader
@@ -14,5 +14,5 @@
     width: 0%;
     height: 100%;
     transition: width 0.2s;
-    background-color: #000;
+    background-color: #dddddd;
 }

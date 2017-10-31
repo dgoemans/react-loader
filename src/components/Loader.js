@@ -12,7 +12,11 @@ class Loader extends React.Component
     {
         super(props);
 
-        this.loader = new CircularLoader();
+        // TODOS:
+        // - Programmatically set the color scheme (CSS or JS?)
+        // - Change the size?
+
+        this.loader = new SimpleBarLoader();
     }
 
     render()
