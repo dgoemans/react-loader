@@ -12,7 +12,7 @@ class Loader extends React.Component
     {
         super(props);
 
-        this.loader = new BouncingBallLoader();
+        this.loader = new CircularLoader();
     }
 
     render()
